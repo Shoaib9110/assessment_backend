@@ -17,8 +17,23 @@ export const getAllProgress = async (req: Request, res: Response) => {
                 attributes: ['firstName'],
             },
         });
-        res.json(progress);
+        const formattedProgress = progress.map(p => {
+            const dateValue = p.date;
+            if (!dateValue) return { ...p.toJSON(), date: null };
+
+            const formattedDate = dateValue.toISOString().split('T')[0];
+
+            return {
+                ...p.toJSON(),
+                date: formattedDate
+            };
+        });
+
+        res.json(formattedProgress);
     } catch (error) {
+        console.log('====================================');
+        console.log(error);
+        console.log('====================================');
         res.status(500).json({ error: 'An error occurred while fetching progress data.' });
     }
 };

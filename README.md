@@ -11,9 +11,9 @@
     ```
     DATABASE_URL=postgres://username:password@localhost:5432/progress_db
     ```
-3. Change `src/config/config.json` file with the db strings :
+3. Change `config/config.json` file with the db strings :
 
-4. Go to `cd src/` and run the migrations:
+4. Run the migrations:
     ```bash
     npm run migrate:up
     ```
@@ -22,7 +22,7 @@
     ```bash
     npm run db:seed
     ```
-6. Back to root `cd ../` run :
+6. Start the serve :
     ```bash
     npm run dev
     ```
