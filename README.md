@@ -22,7 +22,7 @@
     ```bash
     npm run db:seed
     ```
-6. back to root `cd ../` run :
+6. Back to root `cd ../` run :
     ```bash
     npm run dev
     ```
@@ -32,7 +32,7 @@
 - `GET /api/progress`: Fetch all progress data.
 - `POST /api/progress`: Add new progress data.
 - `GET /api/progress/:userId`: Fetch progress data for a specific user.
-- `GET /api/users`: Fetch add users data for add new progress.
+- `GET /api/users`: Fetch users data for add new progress.
 
 ## SSE
 
